@@ -1,22 +1,21 @@
 #include "iostream"
 #include "vector"
-#include <queue>
+#include <math.h>
+#include "algorithm"
 
 using namespace std;
 
 int main() {
     int n;
     cin >> n;
-
-    priority_queue<int> pq;
-    int arr[n];
-
-    for (char i : n) {
-        pq.push(int(i) - int('0'));
+    vector<int> vec;
+    for (int i = 0 ; i < n ; i ++ ) {
+        int input;
+        cin >> input;
+        vec.push_back(input);
     }
-
-    while(!pq.empty()) {
-        cout << pq.top();
-        pq.pop();
+    sort_heap(vec.begin(), vec.end());
+    for ( int i : vec ) {
+        cout << i << endl;
     }
 }

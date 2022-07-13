@@ -1,23 +1,23 @@
-#include "iostream"
-#include "vector"
-#include <queue>
+#include <iostream>
+#include <algorithm>
 
 using namespace std;
 
-int main() {
-    int n = 0;
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+
+    int arr[1000001];
+    int n;
+
     cin >> n;
+    for (int i = 0; i < n; i++)
+        cin >> arr[i];
 
-    priority_queue<int, vector<int>, greater<int>> pq;
+    sort(arr, arr + n);
 
-    for (int i = 0 ; i < n ; i ++ ) {
-        int input;
-        cin >> input;
-        pq.push(input);
-    }
-
-    while(!pq.empty()) {
-        cout << pq.top() << endl;
-        pq.pop();
-    }
+    for (int i = 0; i < n; i++)
+        cout << arr[i] << '\n';
 }
