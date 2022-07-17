@@ -1,5 +1,6 @@
 #include <iostream>
-#include <cmath>
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -8,10 +9,14 @@ int main() {
 
   cin >> x >> y >> w >> h;
 
-  result = 0;
-  if ( 0 <= x and x <= w ) {
-    min()
-  }
+  vector<int> d;
+
+  d.push_back(x);
+  d.push_back(y);
+  d.push_back(h-y);
+  d.push_back(w-x);
+
+  cout << *min_element(d.begin(), d.end());
 
   return 0;
 }
