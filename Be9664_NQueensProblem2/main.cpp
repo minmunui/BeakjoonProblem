@@ -1,8 +1,5 @@
 #include <iostream>
 
-// this solution is indicate a location you cannot place queen
-// but I found weak point that during backtracking progress, locations is initiated unintentionally...
-
 using namespace std;
 
 int solutions = 0;
@@ -21,36 +18,43 @@ void printChess() {
   cout << endl;
 }
 
-void foo(int phase) {
+bool isPlaceable(int x, int y) { // this function detect only upper location from parameter coordinate
+  for ( int i = 1 ; i <= x ; i ++ ) {
+    if ( chessBoard[i][y] ) {
+      return false;
+    }
+    int distance = x - i;
+    if ( y - distance > 0 ) {
+      if ( chessBoard[i][y - distance] ) {
+        return false;
+      }
+    }
+    if ( y + distance <= N ) {
+      if ( chessBoard[i][y + distance] ) {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+
+void placeQueen(int phase) {
 
   if ( phase == N ) {
     for ( int i = 1 ; i <= N ; i++ ) {
-      if (!chessBoard[phase][i]) {
+      if (isPlaceable(phase, i)) {
         solutions ++;
+//        printChess();
         return;
       }
     }
   }
   else {
     for ( int i = 1 ; i <= N ; i ++ ) {
-      if ( !chessBoard[phase][i] ) {
-        for ( int j = phase + 1 ; j <= N ; j ++ ) { // before deeper
-          chessBoard[j][i] = true;
-          int distance = j - phase;
-          if ( i - distance > 0 ) {
-            chessBoard[j][i-distance] = true;
-          }
-          if ( i + distance <= N ) {
-            chessBoard[j][i+distance] = true;
-          }
-        }
-        printChess();
-        foo(phase + 1);
-        for ( int j = phase + 1 ; j <= N ; j ++ ) { // after deeper
-          for ( int k = 1 ; k <= N ; k ++ ) {
-            chessBoard[j][k] = false;
-          }
-        }
+      if ( isPlaceable(phase, i) ) {  // placeable check
+        chessBoard[phase][i] = true;  // before deeper place queen
+        placeQueen(phase + 1);
+        chessBoard[phase][i] = false; // after deeper displace queen
       }
     }
   }
@@ -58,6 +62,6 @@ void foo(int phase) {
 
 int main() {
   cin >> N;
-  foo(1);
+  placeQueen(1);
   cout << solutions;
 }
