@@ -6,40 +6,42 @@ int ww[21][21][21] = {0};
 
 
 int w(int a, int b, int c) {
-
+//    cout << "w(" << a << ", " << b << ", " << c << ")\n";
   if (a <= 0 or b <= 0 or c <= 0)
     return 1;
 
   if (a > 20 or b > 20 or c > 20)
-    return ww[20][20][20];
+    return w(20, 20, 20);
 
-  if (a < b and b < c)
-    return ww[a][b][c-1] + ww[a][b-1][c-1] - ww[a][b-1][c];
 
-  else {
-    return ww[a-1][b][c] + ww[a-1][b-1][c] + ww[a-1][b][c-1] - ww[a-1][b-1][c-1];
+  if ( ww[a][b][c] ) {
+      return ww[a][b][c];
   }
-
+  else {
+      if (a < b and b < c) {
+          ww[a][b][c] = w(a, b, c - 1) + w(a, b - 1, c - 1) - w(a, b - 1, c);
+          return ww[a][b][c];
+  }
+      else {
+          ww[a][b][c] = w(a-1, b, c) + w(a-1, b-1, c) + w(a-1, b, c-1) - w(a-1, b-1, c-1);
+          return ww[a][b][c];
+      }
+  }
 }
 
 int main() {
-  for ( int i = 0 ; i <= 20 ; i ++ ) {
-    for ( int j = 0 ; j <= 20 ; j ++ ) {
-      ww[0][i][j] = ww[i][0][j] = ww[i][j][0] = 1;
-    }
-  }
-  for ( int i = 1 ; i < 20 ; i ++ ) {
 
-    for ( int j = 1 ; j < i ; j ++ ) {
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
 
-      for ( int k = 1; k < j ; k ++ ) {
-        ww[i][j][k] = w(i, j, k);
-        printf("w(%d, %d, %d) = %d\n", i, j, k, ww[i][j][k]);
-      }
-      ww[i][i][j] = w(i, i, j);
-      ww[i][j][i] = w(i, j ,i);
-      ww[j][i][i] = w(j, i, i);
+    int a = 0, b = 0, c = 0;
+    cin >> a >> b >> c;
+
+    while (!(a == -1 and b == -1 and c == -1)) {
+
+        cout << "w(" << a << ", " << b << ", " << c << ") = ";
+        cout << w(a, b, c) << "\n";
+        cin >> a >> b >> c;
     }
-    ww[i][i][i] = w(i, i, i);
-  }
 }
