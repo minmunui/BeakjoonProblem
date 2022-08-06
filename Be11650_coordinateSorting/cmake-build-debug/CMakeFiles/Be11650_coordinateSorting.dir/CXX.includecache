@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/desktop/git/Be11650_coordinateSorting/main.cpp
+iostream
+-
+vector
+C:/desktop/git/Be11650_coordinateSorting/vector
+algorithm
+-
+queue
+-
+

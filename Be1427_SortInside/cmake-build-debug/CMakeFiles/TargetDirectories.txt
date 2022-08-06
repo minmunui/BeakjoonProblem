@@ -1,0 +1,3 @@
+C:/desktop/git/Be1427_SortInside/cmake-build-debug/CMakeFiles/Be1427_SortInside.dir
+C:/desktop/git/Be1427_SortInside/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/desktop/git/Be1427_SortInside/cmake-build-debug/CMakeFiles/rebuild_cache.dir

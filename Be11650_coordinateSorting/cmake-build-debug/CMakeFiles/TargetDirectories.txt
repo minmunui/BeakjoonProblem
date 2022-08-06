@@ -1,0 +1,3 @@
+C:/desktop/git/Be11650_coordinateSorting/cmake-build-debug/CMakeFiles/Be11650_coordinateSorting.dir
+C:/desktop/git/Be11650_coordinateSorting/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/desktop/git/Be11650_coordinateSorting/cmake-build-debug/CMakeFiles/rebuild_cache.dir

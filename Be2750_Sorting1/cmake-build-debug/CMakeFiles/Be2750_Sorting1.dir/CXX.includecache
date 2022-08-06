@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/desktop/git/Be2750_Sorting1/main.cpp
+iostream
+C:/desktop/git/Be2750_Sorting1/iostream
+vector
+C:/desktop/git/Be2750_Sorting1/vector
+queue
+-
+

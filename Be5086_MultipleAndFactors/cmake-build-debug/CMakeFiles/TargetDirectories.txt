@@ -1,0 +1,3 @@
+C:/desktop/git/Be5086_MultipleAndFactors/cmake-build-debug/CMakeFiles/Be5086_MultipleAndFactors.dir
+C:/desktop/git/Be5086_MultipleAndFactors/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/desktop/git/Be5086_MultipleAndFactors/cmake-build-debug/CMakeFiles/rebuild_cache.dir

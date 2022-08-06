@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/desktop/git/Be2108/main.cpp
+iostream
+C:/desktop/git/Be2108/iostream
+vector
+C:/desktop/git/Be2108/vector
+math.h
+-
+algorithm
+C:/desktop/git/Be2108/algorithm
+

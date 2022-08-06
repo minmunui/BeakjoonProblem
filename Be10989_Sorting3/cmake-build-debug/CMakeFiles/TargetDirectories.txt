@@ -1,0 +1,3 @@
+C:/desktop/git/Be10989_Sorting3/cmake-build-debug/CMakeFiles/Be10989_Sorting3.dir
+C:/desktop/git/Be10989_Sorting3/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/desktop/git/Be10989_Sorting3/cmake-build-debug/CMakeFiles/rebuild_cache.dir

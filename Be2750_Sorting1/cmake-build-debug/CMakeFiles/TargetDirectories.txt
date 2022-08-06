@@ -1,0 +1,3 @@
+C:/desktop/git/Be2750_Sorting1/cmake-build-debug/CMakeFiles/Be2750_Sorting1.dir
+C:/desktop/git/Be2750_Sorting1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/desktop/git/Be2750_Sorting1/cmake-build-debug/CMakeFiles/rebuild_cache.dir

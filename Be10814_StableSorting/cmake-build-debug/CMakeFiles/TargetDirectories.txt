@@ -1,0 +1,3 @@
+C:/desktop/git/Be10814_StableSorting/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/desktop/git/Be10814_StableSorting/cmake-build-debug/CMakeFiles/Be10814_StableSorting.dir
+C:/desktop/git/Be10814_StableSorting/cmake-build-debug/CMakeFiles/rebuild_cache.dir
