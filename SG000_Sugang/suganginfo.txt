@@ -1,0 +1,21 @@
+# '#' means that this line is ignored
+# if you want to apply subjects from hoped subjects : 1
+# by using subject codes : 2
+1
+#2
+#
+#
+#
+# Enter the ID and password that are separated by line change.
+# ex) 
+# 201824469
+# password123
+201824469
+chan1823.pus
+# Below, enter the time when the course registration starts.
+2022-08-09 09:34:01
+# 
+# ex) Enter the subject code and class number of the lecture you want to apply with a blank between them.
+# AA10110 001
+# BB11000 001 ...
+!End
